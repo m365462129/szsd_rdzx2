@@ -54,6 +54,7 @@ public class OnlyScanRecognition : MonoBehaviour, ITrackableEventHandler
     protected virtual void OnTrackingFound()
     {
         Debug.LogError("识别成功");
+        GameManager.Instance.Switch(1);
     }
     #endregion // PROTECTED_METHODS
 }
