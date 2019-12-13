@@ -25,10 +25,13 @@ public class GameManager : MonoBehaviour
         if (_type == 0)//扫一扫
         {
             ResetGame();
+            modelroot.SetActive(false);
+            ScanUI.Instance.SetActive(true);
         }
         else if (_type == 1)//游戏
         {
             modelroot.SetActive(true);
+            ScanUI.Instance.SetActive(false);
         }
     }
 
@@ -36,12 +39,13 @@ public class GameManager : MonoBehaviour
     public void ResetGame()
     {
         BlackUI.Instance.ResetUI();
-        modelroot.SetActive(false);
+
     }
 
 
     public void ExitGame()
     {
+        Debug.LogError("退出app");
         Application.Quit();
     }
 }
