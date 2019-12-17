@@ -8,6 +8,6 @@ using UnityEngine;
 
 public enum GameModelEnum
 {
-    SaoYiSao,
+    SaoYiSao = 0,
     Game,
 }
